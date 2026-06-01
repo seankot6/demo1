@@ -4,7 +4,8 @@
 
 | Документ | Содержание |
 |----------|------------|
-| [docs/module-01-database.md](docs/module-01-database.md) | Модуль 1 — RDBExpert, Firebird, SQL |
+| [docs/module-01-database.md](docs/module-01-database.md) | Модуль 1 — RDBExpert, Firebird, инструкция |
+| [sql/module-01-full.sql](sql/module-01-full.sql) | Модуль 1 — полный SQL (таблицы + данные) |
 | [docs/module-02-wpf-app.md](docs/module-02-wpf-app.md) | Модуль 2 — WPF, вход, товары, весь код |
 
 ## Быстрый старт (модуль 2)

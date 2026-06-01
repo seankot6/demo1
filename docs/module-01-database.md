@@ -22,26 +22,47 @@ C:\BookStore\database.fdb
 
 ## Порядок работы
 
-1. **Создать базу данных** → указать путь `C:\BookStore\database.fdb`  
+1. **Создать базу данных** → `C:\BookStore\database.fdb`  
 2. **Создать подключение** → подключиться (зелёная точка)  
-3. **Редактор ER-диаграмм** → 10 таблиц + связи → применить к БД  
-4. Заполнить данные (импорт xlsx или SQL)  
-5. **ER** → обратный инжиниринг → PDF  
-6. **Экспорт метаданных в SQL** (иконка SQL со стрелкой) → `BookStore_script.sql`
+3. **ПКМ по подключению** → **Редактор запросов** (не «экспорт метаданных»)  
+4. Открыть или вставить скрипт **[sql/module-01-full.sql](../sql/module-01-full.sql)** → **Ctrl+A** → **F5**  
+5. Скопировать папку `import` в `C:\BookStore\import` (фото для товаров)  
+6. **ER** → обратный инжиниринг → PDF  
+7. **Экспорт метаданных в SQL** → `BookStore_script.sql` на сдачу  
 
-## Таблицы
+### Если таблицы уже есть
+
+Скрипт с `CREATE TABLE` выдаст ошибку «уже существует». Варианты:
+
+- создать **новую пустую** `.fdb` и выполнить скрипт заново;  
+- или удалить таблицы в обратном порядке FK и выполнить снова.
+
+## Готовый SQL (таблицы + все данные)
+
+Полный файл для копирования:
+
+**[sql/module-01-full.sql](../sql/module-01-full.sql)**
+
+Содержит:
+
+- 10 таблиц: `ROLE`, `CATEGORY`, `MANUFACTURER`, `SUPPLIER`, `PICKUP_POINT`, `ORDER_STATUS`, `USERS`, `PRODUCT`, `ORDERS`, `ORDER_ITEM`
+- справочники, 35 пунктов выдачи, 10 пользователей, 43 товара, 10 заказов, 20 позиций заказа
+- проверочные `SELECT COUNT(*)` в конце
+
+### Ожидаемый результат проверки
+
+| Запрос | Ожидание |
+|--------|----------|
+| `ROLE_CNT` | 3 |
+| `PRODUCT_CNT` | 43 |
+| `ORDERS_CNT` | 10 |
+| `ORDER_ITEM_CNT` | 20 |
+
+## Таблицы (схема)
 
 `ROLE`, `CATEGORY`, `MANUFACTURER`, `SUPPLIER`, `PICKUP_POINT`, `ORDER_STATUS`, `USERS`, `PRODUCT`, `ORDERS`, `ORDER_ITEM`
 
-## Проверка
-
-```sql
-SELECT COUNT(*) FROM PRODUCT;   -- ~43
-SELECT COUNT(*) FROM USERS;     -- 10
-SELECT COUNT(*) FROM PICKUP_POINT; -- 35
-```
-
-## Роли (справочник ROLE)
+## Роли
 
 | ROLE_ID | ROLE_NAME |
 |---------|-----------|
@@ -56,5 +77,14 @@ SELECT COUNT(*) FROM PICKUP_POINT; -- 35
 | 1 | Завершен |
 | 2 | Новый |
 
-Подробные SQL-скрипты генерируются скриптами `gen_fill_sql.py` / `gen_full_sql.py` в корне репозитория (локально).
+## Тестовые логины (для модуля 2)
 
+| Роль | Логин | Пароль |
+|------|-------|--------|
+| Администратор | `94d5ous@gmail.com` | `uzWC67` |
+| Менеджер | `ptec8ym@yahoo.com` | `LdNyos` |
+| Клиент | `yzls62@outlook.com` | `JlFRCZ` |
+
+## Дополнительно
+
+Генераторы SQL из Excel (локально): `gen_fill_sql.py`, `gen_full_sql.py`
