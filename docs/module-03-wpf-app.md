@@ -14,7 +14,7 @@
 - [ ] После изменений список товаров обновляется
 - [ ] **docx** со скриншотами (рекомендуется, как в модуле 2)
 
-**Не нужно в модуле 3:** полноценные заказы (CRUD заказов — следующие модули).
+**Заказы:** по предметной области менеджер **просматривает** заказы, администратор — **CRUD**. В задании ДЭ **В1** отдельного 4-го модуля нет — заказы делают **заглушкой** или простым списком, если останется время после товаров.
 
 ---
 
@@ -575,7 +575,7 @@ public partial class ProductEditWindow : Window
     <Grid Background="{StaticResource MainBg}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Раздел «Заказы»" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-            <TextBlock Text="Полный функционал — в следующих модулях." Margin="0,10,0,20"
+            <TextBlock Text="Просмотр заказов (по предметной области)." Margin="0,10,0,20"
                        HorizontalAlignment="Center"/>
             <Button Content="Назад" Width="120" HorizontalAlignment="Center" Click="BtnBack_Click"/>
         </StackPanel>
@@ -898,11 +898,12 @@ public partial class MainWindow : Window
 
 ---
 
-## Связь с другими модулями
+## Связь с другими модулями (всего 3 в ДЭ)
 
-| Модуль | Содержание |
-|--------|------------|
-| 1 | [module-01-database.md](module-01-database.md), [sql/module-01-full.sql](../sql/module-01-full.sql) |
-| 2 | [module-02-wpf-app.md](module-02-wpf-app.md) — база приложения |
-| 3 | этот файл |
-| 4+ | заказы (просмотр/редактирование) — по заданию ДЭ |
+| Модуль | Время | Содержание |
+|--------|-------|------------|
+| 1 | 50 мин | [module-01-database.md](module-01-database.md), [sql/module-01-full.sql](../sql/module-01-full.sql) |
+| 2 | 40 мин | [module-02-wpf-app.md](module-02-wpf-app.md) — вход, товары |
+| 3 | 1 ч 30 мин | этот файл — поиск, фильтр, CRUD товаров |
+
+**Весь экзамен ДЭ1:** 3 часа = модуль 1 + модуль 2 + модуль 3. Других модулей в варианте **В1_КОД 09.02.07-2-2026-БУ** нет.

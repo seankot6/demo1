@@ -443,7 +443,7 @@ public partial class MainWindow : Window
     }
 
     private void BtnOrders_Click(object sender, RoutedEventArgs e) =>
-        MessageBox.Show("Раздел «Заказы» — в следующих модулях.", "Заказы",
+        MessageBox.Show("Раздел «Заказы» — заглушка (в ДЭ три модуля; заказы по желанию в мод. 3).", "Заказы",
             MessageBoxButton.OK, MessageBoxImage.Information);
 
     private void BtnLogout_Click(object sender, RoutedEventArgs e)

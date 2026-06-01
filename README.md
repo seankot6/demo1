@@ -2,6 +2,8 @@
 
 Материалы для демонстрационного экзамена: **книжный магазин ООО «ЧитайГород»**.
 
+**ДЭ1 — 3 модуля, 3 часа:** база данных (50 мин) → приложение (40 мин) → интерфейс и CRUD товаров (1 ч 30 мин).
+
 | Документ | Содержание |
 |----------|------------|
 | [docs/module-01-database.md](docs/module-01-database.md) | Модуль 1 — RDBExpert, Firebird, инструкция |
@@ -14,7 +16,7 @@
 1. Установи [Visual Studio 2022](https://visualstudio.microsoft.com/) с workload **.NET desktop development**.
 2. База из модуля 1: `C:\BookStore\database.fdb`
 3. Открой [docs/module-02-wpf-app.md](docs/module-02-wpf-app.md) и создай проект по шагам.  
-4. Модуль 3 — продолжение в [docs/module-03-wpf-app.md](docs/module-03-wpf-app.md).
+4. Модуль 3 (последний) — [docs/module-03-wpf-app.md](docs/module-03-wpf-app.md).
 
 ## Ресурсы задания
 
