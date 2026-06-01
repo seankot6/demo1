@@ -1,0 +1,22 @@
+# Build / IDE
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Незавершённый проект VS (в репозитории только инструкции)
+BookStoreApp/
+
+# Локальные данные экзамена
+_pril_v1/
+*.fdb
+*.FDB
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+Desktop.ini
